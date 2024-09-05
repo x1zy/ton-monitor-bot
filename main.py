@@ -16,7 +16,7 @@ def fetch_ton_price():
     headers = {'User-Agent': 'Mozilla/5.0'}  # Указываем User-Agent для имитации запроса от браузера
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
-    price_block = soup.find('span', class_='sc-f70bb44c-0 jxpCgO base-text')
+    price_block = soup.find('span', class_='sc-65e7f566-0 clvjgF base-text')
     if price_block:
         return price_block.text  # Возвращаем текстовое содержимое элемента, содержащего цену
     return "Parse error"
